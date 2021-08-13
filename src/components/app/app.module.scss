@@ -27,6 +27,44 @@
   url('../../assets/fonts/roboto-bold.woff') format('woff');
 }
 
-body {
-  font-family: 'Roboto', Arial, sans-serif;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+:global(.visually-hidden) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  min-width: 1366px;
+  height: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #1f1e25;
+  background-color: #ffffff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
