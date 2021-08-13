@@ -2,18 +2,21 @@ import React from 'react';
 import styles from './header.module.scss';
 
 import SiteMenu from '../site-menu/site-menu';
-import Login from '../login/login';
 import Logo from '../logo/logo';
 
 function Header() {
   return (
     <header className={styles.header}>
-      <div>
+      <div className={styles.wrapper}>
         <Logo />
         <nav>
           <SiteMenu />
-          <Login />
         </nav>
+        <div>
+          <a className={styles.login} href="/">
+            Войти в Интернет-банк
+          </a>
+        </div>
       </div>
     </header>
   );

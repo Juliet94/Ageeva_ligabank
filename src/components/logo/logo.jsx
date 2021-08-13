@@ -1,8 +1,12 @@
 import React from 'react';
+import styles from './logo.module.scss';
+import logo from '../../assets/images/logo.svg';
 
 function Logo() {
   return (
-    <img alt="Лига Банк логотип"/>
+    <a className={styles.logo} href="/">
+      <img src={logo} alt="Лига Банк логотип"/>
+    </a>
   );
 }
 
