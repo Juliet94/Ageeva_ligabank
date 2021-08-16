@@ -9,11 +9,11 @@ function Header() {
     <header className={styles.header}>
       <div className={styles.wrapper}>
         <Logo />
-        <nav>
-          <SiteMenu />
+        <nav className={styles.nav}>
+          <SiteMenu className={styles.list}/>
         </nav>
-        <div>
-          <a className={styles.login} href="/">
+        <div className={styles.login}>
+          <a className={styles.link} href="/">
             Войти в Интернет-банк
           </a>
         </div>

@@ -12,10 +12,25 @@
   justify-content: space-between;
   flex-wrap: wrap;
   width: 1366px;
-  padding: 0 98px;
+  padding: 0 97px;
+}
+
+.nav {
+  min-width: 732px;
+}
+
+.list {
+  padding-top: 10px;
+  margin: 0;
+  gap: 25px;
+  padding-left: 0;
 }
 
 .login {
+  padding-top: 10px;
+}
+
+.link {
   position: relative;
 
   &::before {
@@ -26,5 +41,6 @@
     width: 20px;
     height: 22px;
     left: -30px;
+    top: -1px;
   }
 }
