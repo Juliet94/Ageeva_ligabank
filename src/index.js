@@ -22,7 +22,7 @@ const store = configureStore({
     }),
 });
 
-store.dispatch(fetchRates(dayjs(new Date()).format('YYYY-MM-DD')));
+// store.dispatch(fetchRates(dayjs(new Date()).format('YYYY-MM-DD')));
 
 ReactDOM.render(
   <React.StrictMode>

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './input.module.scss';
 import {Currency} from '../../const';
 
-function Input() {
+function Input({currency, onCurrencyChange, quantity, onQuantityChange}) {
   return (
     <div className={styles.wrapper}>
       <input
@@ -10,8 +10,14 @@ function Input() {
         type="number"
         placeholder="1000"
         min="0"
+        value={quantity}
+        onChange={onQuantityChange}
       />
-      <select className={styles.select}>
+      <select
+        className={styles.select}
+        value={currency}
+        onChange={onCurrencyChange}
+      >
         <option value={Currency.RUB}>{Currency.RUB}</option>
         <option value={Currency.USD}>{Currency.USD}</option>
         <option value={Currency.EUR}>{Currency.EUR}</option>
