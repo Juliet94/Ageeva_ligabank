@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../header/header';
 import Footer from '../footer/footer';
 import Promo from '../promo/promo';
+import Converter from '../converter/converter';
 
 function MainPage() {
   return (
@@ -12,6 +13,7 @@ function MainPage() {
 		      Лига банк - конвертер валют
 	      </h1>
         <Promo />
+        <Converter />
 	    </main>
       <Footer />
     </div>

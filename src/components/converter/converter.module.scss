@@ -1,0 +1,52 @@
+.converter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 510px;
+}
+
+.wrapper {
+  width: 1366px;
+  padding: 51px 98px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.heading {
+  font-weight: 700;
+  font-size: 41px;
+  color: #1F1E25;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 120px;
+  grid-row-gap: 85px;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 26px;
+}
+
+.button_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.btn {
+  background-color: #2c36f2;
+  min-height: 60px;
+  min-width: 382px;
+  border-radius: 4px;
+  color: #f6f7ff;
+  font-size: 18px;
+  font-weight: 500;
+}
