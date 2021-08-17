@@ -1,9 +1,15 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styles from './converter.module.scss';
 import Input from '../input/input';
-import Date from '../date/date';
+import DateCalendar from '../date/date-calendar';
 
 function Converter() {
+  const [date, setDate] = useState(new Date());
+
+  const onDateChange = (checkedDate) => {
+    setDate(checkedDate);
+  };
+
   return (
     <section className={styles.converter}>
       <div className={styles.wrapper}>
@@ -23,7 +29,7 @@ function Converter() {
             </p>
             <Input />
           </div>
-          <Date />
+          <DateCalendar date={date} onDateChange={onDateChange} />
           <div className={styles.button_wrapper}>
             <button className={styles.btn}>
               Сохранить результат
