@@ -3,6 +3,7 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 import Promo from '../promo/promo';
 import Converter from '../converter/converter';
+import History from '../history/history';
 
 function MainPage() {
   return (
@@ -14,6 +15,7 @@ function MainPage() {
 	      </h1>
         <Promo />
         <Converter />
+        <History />
 	    </main>
       <Footer />
     </div>
