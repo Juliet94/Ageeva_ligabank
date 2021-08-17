@@ -50,4 +50,9 @@
   color: #f6f7ff;
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: #707c87;
+  }
 }

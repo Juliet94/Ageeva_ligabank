@@ -9,6 +9,8 @@ import {fetchRates} from '../../store/api-actions';
 import dayjs from 'dayjs';
 import {addHistoryItem} from '../../store/action';
 
+const FIXED_VALUE = 3;
+
 function Converter() {
   const [date, setDate] = useState(new Date());
   const [currencyFrom, setCurrencyFrom] = useState(Currency.RUB);
@@ -19,7 +21,7 @@ function Converter() {
   const rates = useSelector(getRates);
   const dispatch = useDispatch();
 
-  const getAdaptedValue = (value) => value.toFixed(3);
+  const getAdaptedValue = (value) => value.toFixed(FIXED_VALUE);
 
   const onDateChange = (checkedDate) => {
     setDate(checkedDate);
@@ -29,23 +31,31 @@ function Converter() {
 
   const onCurrencyFromChange = (evt) => {
     setCurrencyFrom(evt.target.value);
-    setQuantityTo(getAdaptedValue((+quantityFrom / rates[evt.target.value]) * rates[currencyTo]));
+    setQuantityTo(getAdaptedValue((quantityFrom / rates[evt.target.value]) * rates[currencyTo]));
   };
   const onCurrencyToChange = (evt) => {
     setCurrencyTo(evt.target.value);
-    setQuantityTo(getAdaptedValue((+quantityFrom / rates[currencyFrom]) * rates[evt.target.value]));
+    setQuantityTo(getAdaptedValue((quantityFrom / rates[currencyFrom]) * rates[evt.target.value]));
   };
   const onQuantityFromChange = (evt) => {
     setQuantityFrom(evt.target.value);
-    setQuantityTo(getAdaptedValue((+evt.target.value / rates[currencyFrom]) * rates[currencyTo]));
+    setQuantityTo(getAdaptedValue((evt.target.value / rates[currencyFrom]) * rates[currencyTo]));
   };
   const onQuantityToChange = (evt) => {
     setQuantityTo(evt.target.value);
-    setQuantityFrom(getAdaptedValue((+evt.target.value * rates[currencyFrom]) / rates[currencyTo]));
+    setQuantityFrom(getAdaptedValue((evt.target.value * rates[currencyFrom]) / rates[currencyTo]));
   };
 
-  const onButtonClick = () => {
+  let id = 0;
+  const onButtonClick = (evt) => {
+    evt.preventDefault();
 
+    dispatch(addHistoryItem({
+      id: id++,
+      date: dayjs(date).format('DD.MM.YYYY'),
+      from: `${quantityFrom} ${currencyFrom}`,
+      to: `${quantityTo} ${currencyTo}`,
+    }));
   };
 
   return (
@@ -69,7 +79,12 @@ function Converter() {
           </div>
           <DateCalendar date={date} onDateChange={onDateChange} />
           <div className={styles.button_wrapper}>
-            <button className={styles.btn}>
+            <button
+              className={styles.btn}
+              type="button"
+              onClick={onButtonClick}
+              disabled={!quantityFrom || !quantityTo}
+            >
               Сохранить результат
             </button>
           </div>
