@@ -1,56 +1,73 @@
 .converter {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+  flex-wrap: wrap;
   min-height: 510px;
 }
 
 .wrapper {
-  width: 1366px;
-  padding: 51px 98px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  width: 1366px;
+  padding: 51px 98px;
 }
 
 .heading {
-  font-weight: 700;
-  font-size: 41px;
-  color: #1F1E25;
   margin-top: 0;
   margin-bottom: 35px;
+  font-size: 41px;
+  font-weight: 700;
+  color: #1F1E25;
 }
 
 .form {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 120px;
   grid-row-gap: 85px;
+
+  &::before {
+    position: absolute;
+    top: 82px;
+    left: 559px;
+    width: 60px;
+    height: 34px;
+    content: '';
+    background-image: url('../../assets/images/icon-double-arrow.svg');
+    background-repeat: no-repeat;
+  }
 }
 
 .text {
-  font-weight: 500;
-  font-size: 22px;
   margin-bottom: 26px;
+  font-size: 22px;
+  font-weight: 500;
 }
 
 .button_wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
 .btn {
-  font-family: 'Roboto', Arial, sans-serif;
-  background-color: #2c36f2;
-  min-height: 60px;
   min-width: 382px;
-  border-radius: 4px;
-  color: #f6f7ff;
+  min-height: 60px;
+  font-family: 'Roboto', Arial, sans-serif;
   font-size: 18px;
   font-weight: 500;
+  color: #f6f7ff;
   cursor: pointer;
+  background-color: #2c36f2;
+  border-radius: 4px;
+  transition: opacity 0.25s ease-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
 
   &:disabled {
     background-color: #707c87;

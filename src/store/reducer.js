@@ -1,5 +1,5 @@
 import {createReducer} from '@reduxjs/toolkit';
-import {loadRates, addHistoryItem} from './action';
+import {loadRates, addHistoryItem, clearHistory} from './action';
 
 const initialState = {
   rates: {
@@ -18,9 +18,12 @@ export const reducer = createReducer(initialState, (builder) => {
       state.rates = action.payload;
     })
     .addCase(addHistoryItem, (state, action) => {
-      if (state.history.length > 10) {
-        state.history.shift();
+      if (state.history.length >= 10) {
+        state.history.pop();
       }
-      state.history.push(action.payload);
+      state.history.unshift(action.payload);
+    })
+    .addCase(clearHistory, (state) => {
+      state.history = [];
     });
 });

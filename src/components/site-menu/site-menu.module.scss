@@ -2,3 +2,19 @@
   display: flex;
   flex-wrap: wrap;
 }
+
+.menu_item {
+  transition: opacity 0.25s ease-out;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.active_menu_item {
+  color: #2c36f2;
+}
+
+.hidden_menu_item {
+  display: none;
+}

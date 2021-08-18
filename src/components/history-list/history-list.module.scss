@@ -1,3 +1,21 @@
 .list {
-  min-height: 200px;
+  position: relative;
+  display: grid;
+  min-height: 236px;
+  padding-bottom: 32px;
+  padding-left: 0;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 247px;
+  grid-row-gap: 26px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  &::before {
+    position: absolute;
+    top: -35px;
+    left: 515px;
+    width: 1px;
+    height: 289px;
+    content: '';
+    background-color: #c1c2ca;
+  }
 }

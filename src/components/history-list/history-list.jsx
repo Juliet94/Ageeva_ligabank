@@ -1,8 +1,10 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
 import styles from './history-list.module.scss';
-import {getHistory} from '../../store/selectors';
+
 import HistoryItem from '../history-item/history-item';
+
+import {getHistory} from '../../store/selectors';
 
 function HistoryList() {
   const history = useSelector(getHistory);

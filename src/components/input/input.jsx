@@ -1,5 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styles from './input.module.scss';
+
 import {Currency} from '../../const';
 
 function Input({currency, onCurrencyChange, quantity, onQuantityChange}) {
@@ -27,5 +29,12 @@ function Input({currency, onCurrencyChange, quantity, onQuantityChange}) {
     </div>
   );
 }
+
+Input.propTypes = {
+  currency: PropTypes.string.isRequired,
+  quantity: PropTypes.number,
+  onCurrencyChange: PropTypes.func.isRequired,
+  onQuantityChange: PropTypes.func.isRequired,
+};
 
 export default Input;

@@ -1,57 +1,63 @@
 .footer {
-  background-color: #f6f7ff;
-  min-height: 224px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  min-height: 224px;
+  background-color: #f6f7ff;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 252px 200px 170px 125px 100px;
-  column-gap: 80px;
   width: 1366px;
-  padding: 0 98px;
+  padding: 48px 98px;
+  grid-template-columns: 252px 175px 200px 125px 100px;
+  column-gap: 80px;
 }
 
 .list {
   flex-direction: column;
+  margin-top: 9px;
   margin-right: 10px;
-  gap: 10px;
+  padding-left: 0;
   font-weight: 500;
+  gap: 12px;
 }
 
 .mobile {
   position: relative;
+  padding-top: 11px;
+  padding-right: 30px;
 
   &::before {
-    content: '';
     position: absolute;
-    background-image: url('../../assets/images/icon-mobile.svg');
-    background-repeat: no-repeat;
+    left: -30px;
     width: 10px;
     height: 16px;
-    left: -20px;
+    content: '';
+    background-image: url('../../assets/images/icon-mobile.svg');
+    background-repeat: no-repeat;
   }
 }
 
 .description {
-  color: #707c87;
+  margin-top: 5px;
   font-size: 12px;
   line-height: 140%;
+  color: #707c87;
 }
 
 .phone {
   position: relative;
+  padding-top: 10px;
 
   &::before {
-    content: '';
     position: absolute;
-    background-image: url('../../assets/images/icon-phone.svg');
-    background-repeat: no-repeat;
+    left: -35px;
     width: 16px;
     height: 16px;
-    left: -20px;
+    content: '';
+    background-image: url('../../assets/images/icon-phone.svg');
+    background-repeat: no-repeat;
   }
 }

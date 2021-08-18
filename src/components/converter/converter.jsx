@@ -1,22 +1,24 @@
 import React, {useState} from 'react';
 import {useSelector, useDispatch} from 'react-redux';
+import dayjs from 'dayjs';
 import styles from './converter.module.scss';
+
 import Input from '../input/input';
-import DateCalendar from '../date/date-calendar';
+import DateCalendar from '../date-calendar/date-calendar';
+
 import {Currency} from '../../const';
 import {getRates} from '../../store/selectors';
 import {fetchRates} from '../../store/api-actions';
-import dayjs from 'dayjs';
 import {addHistoryItem} from '../../store/action';
 
-const FIXED_VALUE = 3;
+const FIXED_VALUE = 4;
 
 function Converter() {
   const [date, setDate] = useState(new Date());
   const [currencyFrom, setCurrencyFrom] = useState(Currency.RUB);
   const [currencyTo, setCurrencyTo] = useState(Currency.USD);
-  const [quantityFrom, setQuantityFrom] = useState(0);
-  const [quantityTo, setQuantityTo] = useState(0);
+  const [quantityFrom, setQuantityFrom] = useState();
+  const [quantityTo, setQuantityTo] = useState();
 
   const rates = useSelector(getRates);
   const dispatch = useDispatch();

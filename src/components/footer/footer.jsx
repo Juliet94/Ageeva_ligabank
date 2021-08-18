@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './footer.module.scss';
+
 import Logo from '../logo/logo';
 import SiteMenu from '../site-menu/site-menu';
 import Socials from '../socials/socials';
@@ -15,7 +16,7 @@ function Footer() {
           </p>
         </div>
         <nav>
-          <SiteMenu className={styles.list} />
+          <SiteMenu className={styles.list} isFooter />
         </nav>
         <div className={styles.mobile}>
           <a href="tel: *0904">

@@ -1,98 +1,98 @@
 .promo {
-	background-color: #2c36f2;
-	min-height: 400px;
+	position: relative;
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: center;
 	align-items: center;
-  position: relative;
+	flex-wrap: wrap;
+	min-height: 400px;
+  background-color: #2c36f2;
 
   &::before {
-    content: '';
     position: absolute;
-    background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%);
+    bottom: 0;
+    left: 0;
     width: 150px;
     height: 400px;
-    left: 0;
-    bottom: 0;
+    content: '';
+    background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 36.31%, #2027B3 99.79%);
   }
 
   &::after {
-    content: '';
     position: absolute;
-    background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
-    width: 298px;
-    height: 400px;
     right: 0;
     bottom: 0;
+    width: 298px;
+    height: 400px;
+    content: '';
+    background-image: linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027B3 99.79%);
   }
 }
 
 .wrapper {
-  width: 1366px;
+  position: relative;
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
+	justify-content: left;
+	align-items: flex-start;
+  flex-wrap: wrap;
+  flex-direction: column;
+	width: 1366px;
   min-height: 400px;
   padding: 101px 0 108px 268px;
-	justify-content: left;
-  align-items: flex-start;
-  position: relative;
 
   &::before {
-    content: '';
     position: absolute;
-    background-image: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%);
+    bottom: 0;
+    left: 150px;
     width: 150px;
     height: 269px;
-    left: 150px;
-    bottom: 0;
+    content: '';
+    background-image: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 66.3%, #3841FF 97.14%);
   }
 
   &::after {
-    content: '';
     position: absolute;
-    background-image: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
-    width: 270px;
-    height: 269px;
     right: 298px;
     bottom: 0;
+    width: 270px;
+    height: 269px;
+    content: '';
+    background-image: linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841FF 97.14%);
   }
 }
 
 .heading {
-	font-weight: 700;
+	position: relative;
+	margin: 0;
 	font-size: 54px;
-	color: #f6f7ff;
-  margin: 0;
-  position: relative;
+  font-weight: 700;
+  color: #f6f7ff;
 
   &::before {
-    content: '';
     position: absolute;
-    background-image: url('../../assets/images/credit-cards.png');
+    top: -40px;
+    left: 430px;
+    z-index: 2;
     width: 430px;
     height: 260px;
-    left: 430px;
-    top: -40px;
-    z-index: 2;
+    content: '';
+    background-image: url('../../assets/images/credit-cards.png');
   }
 }
 
 .slogan {
-	font-size: 22px;
-	color: #e0e1ea;
-  margin-top: 10px;
-  margin-bottom: 35px;
+	margin-top: 10px;
+	margin-bottom: 35px;
+  font-size: 22px;
+  color: #e0e1ea;
 }
 
 .link {
 	display: block;
-	background-color: #f6f7ff;
-	color: #1f1e25;
 	min-width: 234px;
 	min-height: 53px;
+	padding: 17px 35px 16px;
 	font-size: 18px;
 	font-weight: 500;
-	padding: 17px 35px 16px;
+	color: #1f1e25;
+	background-color: #f6f7ff;
 }
