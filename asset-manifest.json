@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.css": "/static/css/main.124ddedd.chunk.css",
+    "main.js": "/static/js/main.e9767d42.chunk.js",
+    "main.js.map": "/static/js/main.e9767d42.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.67ebf1cc.js",
+    "runtime-main.js.map": "/static/js/runtime-main.67ebf1cc.js.map",
+    "static/css/2.ecccef68.chunk.css": "/static/css/2.ecccef68.chunk.css",
+    "static/js/2.0d3aeb8f.chunk.js": "/static/js/2.0d3aeb8f.chunk.js",
+    "static/js/2.0d3aeb8f.chunk.js.map": "/static/js/2.0d3aeb8f.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.ecccef68.chunk.css.map": "/static/css/2.ecccef68.chunk.css.map",
+    "static/css/main.124ddedd.chunk.css.map": "/static/css/main.124ddedd.chunk.css.map",
+    "static/js/2.0d3aeb8f.chunk.js.LICENSE.txt": "/static/js/2.0d3aeb8f.chunk.js.LICENSE.txt",
+    "static/media/promo.module.scss": "/static/media/credit-cards.ffb7935f.png",
+    "static/media/history-item.module.scss": "/static/media/icon-arrow.7aaa3d16.svg",
+    "static/media/date-calendar.module.scss": "/static/media/icon-calendar.5dacebba.svg",
+    "static/media/converter.module.scss": "/static/media/icon-double-arrow.986364b4.svg",
+    "static/media/icon-facebook.08f5b8a9.svg": "/static/media/icon-facebook.08f5b8a9.svg",
+    "static/media/icon-instagram.2f285d61.svg": "/static/media/icon-instagram.2f285d61.svg",
+    "static/media/header.module.scss": "/static/media/icon-login.877a13e5.svg",
+    "static/media/footer.module.scss": "/static/media/icon-phone.9fd53784.svg",
+    "static/media/icon-twitter.a9dbc3b2.svg": "/static/media/icon-twitter.a9dbc3b2.svg",
+    "static/media/icon-youtube.990fb51a.svg": "/static/media/icon-youtube.990fb51a.svg",
+    "static/media/logo.58c8940d.svg": "/static/media/logo.58c8940d.svg",
+    "static/media/app.module.scss": "/static/media/roboto-regular.91f689ac.woff2",
+    "static/media/input.module.scss": "/static/media/select-arrow.4c5bbd21.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67ebf1cc.js",
+    "static/css/2.ecccef68.chunk.css",
+    "static/js/2.0d3aeb8f.chunk.js",
+    "static/css/main.124ddedd.chunk.css",
+    "static/js/main.e9767d42.chunk.js"
+  ]
+}
